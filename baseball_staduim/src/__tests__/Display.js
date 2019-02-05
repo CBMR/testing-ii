@@ -5,7 +5,7 @@ import Dashboard from '../Dashboard'
 
 afterEach(cleanup)
 
-describe('checks if it displays the balls and striks', () => {
+describe('checks if it displays the balls and strikes', () => {
     test('checks if balls displays', () => {
       const component = render(<Dashboard balls={1} />)
       const balls = component.getByTestId('balls');
@@ -69,6 +69,7 @@ describe('Clicking Hit, Strike, Ball, Foul', () => {
       expect(balls).toHaveTextContent('Balls: 1')
     })
   })
+
   describe('clicking Foul', () => {
     test('checks if strike and ball resets to zero when there are two strikes and they hit a foul', () => {
       const component = render(<Dashboard balls={3} strikes={2} />);
